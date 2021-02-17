@@ -10,10 +10,7 @@ void printTreeInfo(QObject *parent)
     // TODO: print here info about all nodes
     Human* human = qobject_cast<Human*>(parent);
     if (human) {
-        QString strTab;
-        for (unsigned char nTab =1; iNumSpace>0 && nTab<iNumSpace; ++nTab)
-            strTab += '\t';
-
+        QString strTab(iNumSpace-1, '\t');
         qDebug() << qPrintable(strTab) << human->objectName()
          << "age:" << human->age()
          << "sex:" << human->sexSymbol();

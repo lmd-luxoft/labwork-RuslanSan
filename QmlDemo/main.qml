@@ -29,7 +29,7 @@ Window {
         y : 10
         width: 50
         height:50
-        source:  "/TAHA.bmp"
+        source:  "/Tana.png"
     }
 
     Button {

@@ -1,7 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>TAHA.bmp</file>
         <file>GreenSquare.qml</file>
+        <file>Tana.png</file>
     </qresource>
 </RCC>

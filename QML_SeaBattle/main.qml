@@ -1,10 +1,11 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Controls 2.0
+import RuslanSan.SeaBattle 1.0
 
 Window {
     id: _root1
-    width: 640
+    width: 1040
     height: 480
     visible: true
     title: qsTr("Hello World")
@@ -70,36 +71,41 @@ Window {
         }
     }*/
 
-    Rectangle {
-        width: 400; height: 400; color: "black"
-
-        Grid {
-            id: _grid
-            x: 5; y: 5
-            rows: 5; columns: 5; spacing: 10
-
-            Repeater { model: 24
-                       Rectangle { width: 70; height: 70
-                                   color: "lightgreen"
-
-                                   Rectangle {x:10; y:10; width: 50; height: 50
-                                               color: "yellow"}
-                                   Text { text: index
-                                          font.pointSize: 30
-                                          anchors.centerIn: parent }
-
-                       }
-            }
-        }
+    BattleFieldView {
+        id: _BattleField_Player
     }
+    BattleFieldView {
+        id: _BattleField_Computer
+        playerIsComputer: true
+        x: 400
+    }
+
     Button {
         x: 200
         text: "Click me"
         onClicked: function(){
-            _grid.children[15].color="blue";
-            _grid.children[15].children[0].color="red";
+            //_BattleField_Player._grid.children[15].children[0].color="blue";
+            //_BattleField_Computer._grid.children[15].children[0].color="chartreuse";
+
+            _BattleField_Computer.children[0].children[15].color="blue";
+            _BattleField_Computer.children[0].children[15].children[0].color="red";
             //_grid.children[15].children[1].color="red";
+
+            //bText = webdriver.execute_script("var v = ObjectNameUtils.findChild('button'); return v.text;")
         }
     }
+    Label {
+        x: 300
+        id: _labelCoord
+        text: "Coord"
+        color: "red"
+    }
+  /*  Label {
+        x: 300
+        y: 100
+        id: _labelAmountOfCell
+        text: _BattleField_Player.amountOfCells
+        color: "red"
+    }*/
 
 }

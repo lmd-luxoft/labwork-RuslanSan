@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.14.0, 2021-02-23T20:40:11. -->
+<!-- Written by QtCreator 4.14.0, 2021-02-23T09:57:00. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
-  <value type="QByteArray">{c9a486c9-b0b1-49a8-b05a-1616913f61d1}</value>
+  <value type="QByteArray">{426666ed-c2c5-4fac-8f6a-88751671cf94}</value>
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -96,8 +96,8 @@
    <value type="int" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">
     <value type="int" key="EnableQmlDebugging">0</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">E:\Ruslan\Projects\QT\labwork-RuslanSan\build-QML_SeaBattle-Desktop_Qt_6_0_1_MSVC2019_64bit-Debug</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">E:/Ruslan/Projects/QT/labwork-RuslanSan/build-QML_SeaBattle-Desktop_Qt_6_0_1_MSVC2019_64bit-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">J:\Ruslan\Projects\QT\QT_Training\labwork-RuslanSan\build-QML_SeaBattle-Desktop_Qt_6_0_1_MSVC2019_64bit-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">J:/Ruslan/Projects/QT/QT_Training/labwork-RuslanSan/build-QML_SeaBattle-Desktop_Qt_6_0_1_MSVC2019_64bit-Debug</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -136,8 +136,8 @@
     <value type="int" key="RunSystemFunction">0</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.1">
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">E:\Ruslan\Projects\QT\labwork-RuslanSan\build-QML_SeaBattle-Desktop_Qt_6_0_1_MSVC2019_64bit-Release</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">E:/Ruslan/Projects/QT/labwork-RuslanSan/build-QML_SeaBattle-Desktop_Qt_6_0_1_MSVC2019_64bit-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">J:\Ruslan\Projects\QT\QT_Training\labwork-RuslanSan\build-QML_SeaBattle-Desktop_Qt_6_0_1_MSVC2019_64bit-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">J:/Ruslan/Projects/QT/QT_Training/labwork-RuslanSan/build-QML_SeaBattle-Desktop_Qt_6_0_1_MSVC2019_64bit-Release</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -178,8 +178,8 @@
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.2">
     <value type="int" key="EnableQmlDebugging">0</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">E:\Ruslan\Projects\QT\labwork-RuslanSan\build-QML_SeaBattle-Desktop_Qt_6_0_1_MSVC2019_64bit-Profile</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">E:/Ruslan/Projects/QT/labwork-RuslanSan/build-QML_SeaBattle-Desktop_Qt_6_0_1_MSVC2019_64bit-Profile</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">J:\Ruslan\Projects\QT\QT_Training\labwork-RuslanSan\build-QML_SeaBattle-Desktop_Qt_6_0_1_MSVC2019_64bit-Profile</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">J:/Ruslan/Projects/QT/QT_Training/labwork-RuslanSan/build-QML_SeaBattle-Desktop_Qt_6_0_1_MSVC2019_64bit-Profile</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -294,14 +294,14 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:E:/Ruslan/Projects/QT/labwork-RuslanSan/QML_SeaBattle/QML_SeaBattle.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">E:/Ruslan/Projects/QT/labwork-RuslanSan/QML_SeaBattle/QML_SeaBattle.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:J:/Ruslan/Projects/QT/QT_Training/labwork-RuslanSan/QML_SeaBattle/QML_SeaBattle.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">J:/Ruslan/Projects/QT/QT_Training/labwork-RuslanSan/QML_SeaBattle/QML_SeaBattle.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">E:/Ruslan/Projects/QT/labwork-RuslanSan/build-QML_SeaBattle-Desktop_Qt_6_0_1_MSVC2019_64bit-Debug</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">J:/Ruslan/Projects/QT/QT_Training/labwork-RuslanSan/build-QML_SeaBattle-Desktop_Qt_6_0_1_MSVC2019_64bit-Debug</value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>
@@ -318,8 +318,8 @@
    <value type="int" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">
     <value type="int" key="EnableQmlDebugging">0</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">E:\Ruslan\Projects\QT\labwork-RuslanSan\build-QML_SeaBattle-Desktop_Qt_6_0_1_MinGW_64_bit-Debug</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">E:/Ruslan/Projects/QT/labwork-RuslanSan/build-QML_SeaBattle-Desktop_Qt_6_0_1_MinGW_64_bit-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">J:\Ruslan\Projects\QT\QT_Training\labwork-RuslanSan\build-QML_SeaBattle-Desktop_Qt_6_0_1_MinGW_64_bit-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">J:/Ruslan/Projects/QT/QT_Training/labwork-RuslanSan/build-QML_SeaBattle-Desktop_Qt_6_0_1_MinGW_64_bit-Debug</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -358,8 +358,8 @@
     <value type="int" key="RunSystemFunction">0</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.1">
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">E:\Ruslan\Projects\QT\labwork-RuslanSan\build-QML_SeaBattle-Desktop_Qt_6_0_1_MinGW_64_bit-Release</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">E:/Ruslan/Projects/QT/labwork-RuslanSan/build-QML_SeaBattle-Desktop_Qt_6_0_1_MinGW_64_bit-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">J:\Ruslan\Projects\QT\QT_Training\labwork-RuslanSan\build-QML_SeaBattle-Desktop_Qt_6_0_1_MinGW_64_bit-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">J:/Ruslan/Projects/QT/QT_Training/labwork-RuslanSan/build-QML_SeaBattle-Desktop_Qt_6_0_1_MinGW_64_bit-Release</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -400,8 +400,8 @@
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.2">
     <value type="int" key="EnableQmlDebugging">0</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">E:\Ruslan\Projects\QT\labwork-RuslanSan\build-QML_SeaBattle-Desktop_Qt_6_0_1_MinGW_64_bit-Profile</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">E:/Ruslan/Projects/QT/labwork-RuslanSan/build-QML_SeaBattle-Desktop_Qt_6_0_1_MinGW_64_bit-Profile</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">J:\Ruslan\Projects\QT\QT_Training\labwork-RuslanSan\build-QML_SeaBattle-Desktop_Qt_6_0_1_MinGW_64_bit-Profile</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">J:/Ruslan/Projects/QT/QT_Training/labwork-RuslanSan/build-QML_SeaBattle-Desktop_Qt_6_0_1_MinGW_64_bit-Profile</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -516,10 +516,11 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.CustomExecutableRunConfiguration</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey"></value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:J:/Ruslan/Projects/QT/QT_Training/labwork-RuslanSan/QML_SeaBattle/QML_SeaBattle.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">J:/Ruslan/Projects/QT/QT_Training/labwork-RuslanSan/QML_SeaBattle/QML_SeaBattle.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
+    <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
    </valuemap>

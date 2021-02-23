@@ -81,7 +81,7 @@ Window {
     }
 
     Button {
-        x: 200
+        x: 220
         text: "Click me"
         onClicked: function(){
             //_BattleField_Player._grid.children[15].children[0].color="blue";

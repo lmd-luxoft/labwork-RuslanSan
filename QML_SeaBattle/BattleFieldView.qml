@@ -45,7 +45,7 @@ Rectangle {
         onSetCellValue: function(x, y, state)
         {
             var color = "red";
-            if (state === 2)
+            if (state === 1)
                 color = "white";
 
             if (playerIsComputer) color = "#C8C880FF";

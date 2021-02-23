@@ -6,7 +6,7 @@
 struct SShip
 {
     enum EShipDirection {Horizontal, Vertical};
-    enum EShipState {Absent=1, Normal, Broken, Destroyed};
+    enum EShipState {Absent, Normal, Broken, Destroyed};
     SShip(unsigned char X, unsigned char Y, unsigned char Size, EShipDirection Direction):
         x(X), y(Y), size(Size), direction(Direction), state(0) {};
     unsigned char x;

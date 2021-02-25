@@ -34,6 +34,7 @@ signals:
 
 private:
     void loadShipsInCells();
+    void markShipsAsDestroyed();
 
 private:
     quint8 m_amountOfRows;

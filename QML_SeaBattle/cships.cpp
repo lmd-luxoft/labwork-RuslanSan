@@ -6,16 +6,16 @@ CShips::CShips(unsigned char amountOfRowsInBF, unsigned char amountOfColumnsInBF
 
 }
 
-bool CShips::addShip(unsigned char x, unsigned char y, unsigned char size, SShip::EShipDirection direction)
+bool CShips::addShip(unsigned char x, unsigned char y, unsigned char size, CShip::EShipDirection direction)
 {
     bool bResult = false; //to check if position and size of ship are inside battlefield
 
-    if ( direction == SShip::Horizontal && ((x+size)<=(m_amountOfColumnsInBF+1)) && (y<=m_amountOfRowsInBF) )  {
-        m_ships.push_back( SShip(x, y, size, direction) );
+    if ( direction == CShip::Horizontal && ((x+size)<=(m_amountOfColumnsInBF+1)) && (y<=m_amountOfRowsInBF) )  {
+        m_ships.push_back( CShip(x, y, size, direction) );
         bResult = true;
     }
-    if ( direction == SShip::Vertical && ((y+size)<=(m_amountOfRowsInBF+1)) && (x<=m_amountOfColumnsInBF) )  {
-        m_ships.push_back( SShip(x, y, size, direction) );
+    if ( direction == CShip::Vertical && ((y+size)<=(m_amountOfRowsInBF+1)) && (x<=m_amountOfColumnsInBF) )  {
+        m_ships.push_back( CShip(x, y, size, direction) );
         bResult = true;
     }
     return bResult;
@@ -30,20 +30,53 @@ bool CShips::removeShip(unsigned char x, unsigned char y)
     return bResult;
 }
 
-SShip::EShipState CShips::getShipStateAtPos(unsigned char x, unsigned char y)
+CShip* CShips::isShipPresentAtPos(unsigned char x, unsigned char y)
 {
-    SShip::EShipState state=SShip::Absent;
-    for (auto ship: m_ships)
+    CShip* pShip=nullptr;
+    for (auto &ship: m_ships)
     {
-        if (ship.direction == SShip::Horizontal) {
-            if ( ((x >= ship.x) && ( x < (ship.x+ship.size))) && ship.y ==y)
-                state=SShip::Normal;
+        if (ship.direction() == CShip::Horizontal) {
+            if ( ((x >= ship.x()) && ( x < (ship.x()+ship.size()))) && ship.y() ==y) {
+                pShip = &ship;
+                break;
+            }
         }
-        else {
-            if ( ((y >= ship.y) && ( y < (ship.y+ship.size))) && ship.x ==x)
-                state=SShip::Normal;
-        }
-
+        else
+            if ( ((y >= ship.y()) && ( y < (ship.y()+ship.size()))) && ship.x() ==x){
+                pShip = &ship;
+                break;
+            }
     }
-    return state;
+    return pShip;
+}
+
+unsigned char CShip::x() const
+{
+    return m_x;
+}
+
+unsigned char CShip::y() const
+{
+    return m_y;
+}
+
+unsigned char CShip::size() const
+{
+    return m_size;
+}
+
+CShip::EShipDirection CShip::direction() const
+{
+    return m_direction;
+}
+
+CShip::EShipState CShip::state() const
+{
+    CShip::EShipState state = m_amountNotDestroyedParts ? Broken: Destroyed;
+    return  (m_size-m_amountNotDestroyedParts)  ? state : Normal;
+}
+
+void CShip::DestroyOnePart()
+{
+    if (m_amountNotDestroyedParts) --m_amountNotDestroyedParts;
 }

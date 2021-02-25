@@ -44,12 +44,14 @@ Rectangle {
         id: _BF
         onSetCellValue: function(x, y, state)
         {
-            var color = "red";
-            if (state === 1)
-                color = "white";
+            var color = "lightblue";
+            var colorOuterBox = "lightblue";
+            if (state === 1) { color = "white"; colorOuterBox = "lightblue";};
+            if (state === 2) {color = "red"; colorOuterBox = "lightblue";};
+            if (state === 3) {color = "black"; colorOuterBox = "red";};
 
             if (playerIsComputer) color = "#C8C880FF";
-            _grid.children[(y-1)*amountOfRows + (x-1)].color="blue";
+            _grid.children[(y-1)*amountOfRows + (x-1)].color = colorOuterBox;
             _grid.children[(y-1)*amountOfRows + (x-1)].children[0].color=color;
         }
     }

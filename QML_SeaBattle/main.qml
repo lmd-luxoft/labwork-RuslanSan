@@ -73,39 +73,49 @@ Window {
 
     BattleFieldView {
         id: _BattleField_Player
+        objectName: "BattleField_Player"
+        onShipsDestroyed: {
+            _labelAllShipsDestroyed.text = "game over for Player"
+        }
     }
     BattleFieldView {
         id: _BattleField_Computer
+        objectName: "BattleField_Computer"
         playerIsComputer: true
         x: 400
-    }
-
-    Button {
-        x: 220
-        text: "Click me"
-        onClicked: function(){
-            //_BattleField_Player._grid.children[15].children[0].color="blue";
-            //_BattleField_Computer._grid.children[15].children[0].color="chartreuse";
-
-            _BattleField_Computer.children[0].children[15].color="blue";
-            _BattleField_Computer.children[0].children[15].children[0].color="red";
-            //_grid.children[15].children[1].color="red";
-
-            //bText = webdriver.execute_script("var v = ObjectNameUtils.findChild('button'); return v.text;")
+        onShipsDestroyed: {
+            _labelAllShipsDestroyed.text = "game over for Computer"
         }
     }
+
+//    Button {
+//        x: 260
+//        text: "Click me"
+//        onClicked: function(){
+//            //_BattleField_Player._grid.children[15].children[0].color="blue";
+//            //_BattleField_Computer._grid.children[15].children[0].color="chartreuse";
+
+//            _BattleField_Computer.children[0].children[15].color="blue";
+//            _BattleField_Computer.children[0].children[15].children[0].color="red";
+//            //_grid.children[15].children[1].color="red";
+
+//            //bText = webdriver.execute_script("var v = ObjectNameUtils.findChild('button'); return v.text;")
+//        }
+//    }
     Label {
         x: 300
+        y: 60
         id: _labelCoord
         text: "Coord"
         color: "red"
     }
-  /*  Label {
+
+    Label {
+        id: _labelAllShipsDestroyed
         x: 300
         y: 100
-        id: _labelAmountOfCell
-        text: _BattleField_Player.amountOfCells
+        text: "********aaaa"
         color: "red"
-    }*/
+    }
 
 }

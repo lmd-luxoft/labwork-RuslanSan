@@ -1,6 +1,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include "cbattlefield.h"
+#include "cplayers.h"
 
 int main(int argc, char *argv[])
 {
@@ -21,6 +22,9 @@ int main(int argc, char *argv[])
     qmlRegisterType<CBattleField>("RuslanSan.SeaBattle", 1,0, "BattleField");
 
     engine.load(url);
+
+    QObject * root = engine.rootObjects().first();
+    CPlayers players(root);
 
     return app.exec();
 }

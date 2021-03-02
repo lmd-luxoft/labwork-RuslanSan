@@ -8,6 +8,8 @@ CONFIG += c++11
 
 SOURCES += \
         cbattlefield.cpp \
+        cplayers.cpp \
+        cship.cpp \
         cships.cpp \
         main.cpp
 
@@ -26,4 +28,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     cbattlefield.h \
+    cplayers.h \
+    cship.h \
     cships.h

@@ -1,4 +1,5 @@
 #include "cships.h"
+#include <algorithm>
 
 CShips::CShips(unsigned char amountOfRowsInBF, unsigned char amountOfColumnsInBF):
     m_amountOfRowsInBF(amountOfRowsInBF), m_amountOfColumnsInBF(amountOfColumnsInBF)
@@ -23,11 +24,18 @@ bool CShips::addShip(unsigned char x, unsigned char y, unsigned char size, CShip
 
 bool CShips::removeShip(unsigned char x, unsigned char y)
 {
-    bool bResult = true; //to check if position and size of ship are inside battlefield
-   // m_ships.find
-    //m_ships.remove
-    if (x && y) bResult = true;
+    bool bResult = true;
+    if (isShipPresentAtPos(x,y)) {
+        std::vector<CShip>::iterator it = std::find_if(m_ships.begin(), m_ships.end(),
+                                                       [x,y] (const CShip& ship) { return (x==ship.x() && y==ship.y()); });
+        if(it != m_ships.end()) m_ships.erase(it);
+    }
     return bResult;
+}
+
+const std::vector<CShip>& CShips::ships() const
+{
+    return m_ships;
 }
 
 CShip* CShips::isShipPresentAtPos(unsigned char x, unsigned char y)
@@ -50,33 +58,13 @@ CShip* CShips::isShipPresentAtPos(unsigned char x, unsigned char y)
     return pShip;
 }
 
-unsigned char CShip::x() const
+unsigned char CShips::amountOfShips() const
 {
-    return m_x;
+    return m_ships.size();
 }
 
-unsigned char CShip::y() const
+unsigned char CShips::amountOfDestoyedShips() const
 {
-    return m_y;
-}
-
-unsigned char CShip::size() const
-{
-    return m_size;
-}
-
-CShip::EShipDirection CShip::direction() const
-{
-    return m_direction;
-}
-
-CShip::EShipState CShip::state() const
-{
-    CShip::EShipState state = m_amountNotDestroyedParts ? Broken: Destroyed;
-    return  (m_size-m_amountNotDestroyedParts)  ? state : Normal;
-}
-
-void CShip::DestroyOnePart()
-{
-    if (m_amountNotDestroyedParts) --m_amountNotDestroyedParts;
+    return std::count_if(m_ships.begin(), m_ships.end(),
+                  [] (const CShip& ship) { return (CShip::Destroyed==ship.state()); });
 }

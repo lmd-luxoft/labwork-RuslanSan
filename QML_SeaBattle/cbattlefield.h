@@ -13,28 +13,31 @@ class CBattleField : public QObject
 public:
     explicit CBattleField(QObject *parent = nullptr);
     //Q_PROPERTY(QString city READ city WRITE setCity NOTIFY cityChanged);
-    Q_PROPERTY(bool playerIsComputer READ isPlayerComputer WRITE setPlayerIsComputer);// NOTIFY PlayerIsComputerChanged);
+    Q_PROPERTY(bool playerIsComputer READ isPlayerComputer WRITE setPlayerIsComputer NOTIFY PlayerIsComputerChanged);
     Q_PROPERTY(quint8 amountOfRows READ amountOfRows CONSTANT);
+    Q_PROPERTY(quint8 amountOfShips READ amountOfShips CONSTANT);
+    Q_PROPERTY(quint8 amountOfDestroyedShips READ amountOfDestroyedShips);
     Q_INVOKABLE void fire(quint8 x, quint8 y);
-    //Q_PROPERTY(quint8 amountOfCells READ amountOfCells CONSTANT);
 
     quint8 amountOfRows() const;
+    quint8 amountOfShips() const;
+    quint8 amountOfDestroyedShips() const;
 
     bool isPlayerComputer() const;
     void setPlayerIsComputer(bool playerIsComputer);
-
-//    quint8 amountOfCells() const
-//    {
-//        return static_cast<quint8>( m_cells.size() );
-//    }
+    void showShipInState(const CShip* pShip, quint8 state);
+    void showShips();
+    CShips& ships();
 
 signals:
     void setCellValue(quint8 x, quint8 y, quint8 state);
-    //void PlayerIsComputerChanged(bool playerIsComputer);
+    void shipDestroyed();
+    void allShipDestroyed();
+    void PlayerIsComputerChanged(bool playerIsComputer);
 
 private:
-    void loadShipsInCells();
-    void markShipsAsDestroyed();
+//    void loadShipsInCells();
+//    void markShipsAsDestroyed();
 
 private:
     quint8 m_amountOfRows;

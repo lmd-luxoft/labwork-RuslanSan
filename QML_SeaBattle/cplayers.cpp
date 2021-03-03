@@ -1,5 +1,6 @@
 #include "cplayers.h"
 #include "cbattlefield.h"
+#include "random"
 
 CPlayers::CPlayers(QObject *root, QObject *parent) : QObject(parent), m_pRoot(root), m_pBF_Human(nullptr), m_pBF_Computer(nullptr)
 {
@@ -12,11 +13,9 @@ CPlayers::CPlayers(QObject *root, QObject *parent) : QObject(parent), m_pRoot(ro
 //         if (rect)
 //             rect->setProperty("color", "red");
 
-        if (m_pBF_Human) {
-       // connect(myButton, SIGNAL(buttonClicked(QString)), this, SLOT(buttonHandler(QString)));
-            int i;
-            ++i;
-        }
+//        if (m_pBF_Human) {
+//            connect(m_pBF_Human, SIGNAL(afterFire(bool)), this, SLOT(computerFire(bool)));
+//        }
     }
     pBF =  root->findChild<QObject*>("BattleField_Computer");
     if (pBF)
@@ -24,8 +23,7 @@ CPlayers::CPlayers(QObject *root, QObject *parent) : QObject(parent), m_pRoot(ro
         pBF =  pBF->findChild<QObject*>("BF");
         m_pBF_Computer = qobject_cast<CBattleField*>(pBF);
         if (m_pBF_Computer) {
-            int i;
-            ++i;
+            connect(m_pBF_Computer, SIGNAL(afterFire(bool)), this, SLOT(computerFire(bool)));
         }
     }
 
@@ -59,6 +57,22 @@ void CPlayers::putShips()
         m_pBF_Computer->ships().addShip(5, 5, 1, CShip::Horizontal);
         m_pBF_Computer->ships().addShip(3, 3, 1, CShip::Horizontal);
         m_pBF_Computer->ships().addShip(10, 4, 1, CShip::Horizontal);
+    }
+}
+
+void CPlayers::computerFire(bool currentPlayerIsHuman)
+{
+    if ( currentPlayerIsHuman && m_pBF_Human)    {
+
+        const auto arraySize = m_pBF_Human->availableCells().size();
+        auto index = std::rand() % (arraySize);
+        if (1 == arraySize) index = 0;
+        const quint8 cellIndex = m_pBF_Human->availableCells().at(index);
+        //quint8 index = (y-1)*C_amountOfRows + (x-1);
+        quint8 y = (cellIndex / C_amountOfRows) + 1;
+        quint8 x = (cellIndex % C_amountOfRows) + 1;
+
+        m_pBF_Human->fire(x, y);
     }
 }
 

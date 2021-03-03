@@ -28,16 +28,16 @@ public:
     void showShipInState(const CShip* pShip, quint8 state);
     void showShips();
     CShips& ships();
+    const std::vector<quint8>& availableCells() const;
 
 signals:
     void setCellValue(quint8 x, quint8 y, quint8 state);
     void shipDestroyed();
     void allShipDestroyed();
     void PlayerIsComputerChanged(bool playerIsComputer);
+    void afterFire(bool currentPlayerIsHuman);
 
 private:
-//    void loadShipsInCells();
-//    void markShipsAsDestroyed();
 
 private:
     quint8 m_amountOfRows;

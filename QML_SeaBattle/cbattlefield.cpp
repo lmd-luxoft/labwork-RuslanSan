@@ -21,6 +21,10 @@ CShips& CBattleField::ships() {
     return m_ships;
 }
 
+const std::vector<quint8> &CBattleField::availableCells() const
+{
+    return m_availableCells;
+}
 
 void CBattleField::fire(quint8 x, quint8 y)
 {
@@ -49,6 +53,7 @@ void CBattleField::fire(quint8 x, quint8 y)
             }
             if (CShip::Destroyed != state)
                 emit setCellValue(x, y, state);
+            emit afterFire( m_playerIsComputer );
         }
     }
 }
@@ -98,18 +103,3 @@ void CBattleField::showShips()
         showShipInState( &ship, CShip::Normal);
     }
 }
-
-//void CBattleField::loadShipsInCells()
-//{
-//    //for (auto ship: m_ships) {
-
-//    //}
-//}
-
-//void CBattleField::markShipsAsDestroyed()
-//{
-
-//    //for (int i=0; )
-//    //    void setCellValue(quint8 x, quint8 y, quint8 state);
-
-//}

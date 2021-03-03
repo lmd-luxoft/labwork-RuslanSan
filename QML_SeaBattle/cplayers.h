@@ -15,6 +15,9 @@ public:
 
 signals:
 
+public slots:
+    void computerFire(bool currentPlayerIsHuman);
+
 private:
     QObject* m_pRoot;
     CBattleField* m_pBF_Human;

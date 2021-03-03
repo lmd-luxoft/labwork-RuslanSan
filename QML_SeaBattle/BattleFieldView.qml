@@ -50,7 +50,7 @@ Rectangle {
         {
             var color = "lightblue";
             var colorOuterBox = "lightblue";
-            if (state === 1) { color = "white"; colorOuterBox = "lightblue";};
+            if (state === 1) { color = "white"; colorOuterBox = "#808080FF";};
             if (state === 2) {color = "red"; colorOuterBox = "lightblue";};
             if (state === 3) {color = "black"; colorOuterBox = "red";};
 
@@ -63,9 +63,7 @@ Rectangle {
         }
 
     }
-    //property bool playerIsComputer: "";
     property alias playerIsComputer: _BF.playerIsComputer
-   // property alias BF_objectName: _BF.objectName
 
 
     Grid {
